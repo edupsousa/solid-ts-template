@@ -1,16 +1,7 @@
-import type { Component } from 'solid-js';
+import { Component, createSignal } from 'solid-js';
 
-import logo from './logo.svg';
-import { css, keyframes } from 'solid-styled-components';
-
-const logoSpinKeyFrames = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`;
+import { css } from 'solid-styled-components';
+import Logo from './Logo';
 
 const appClass = css`
   text-align: center;
@@ -26,22 +17,32 @@ const appClass = css`
     color: white;
   }
 
-  & .logo {
-    animation: ${logoSpinKeyFrames} infinite 20s linear;
-    height: 40vmin;
-    pointer-events: none;
-  }
-
   & .link {
     color: #b318f0;
+  }
+
+  & .rotate {
+    display: flex;
+    column-gap: 0.5rem;
+    margin-top: 1rem;
   }
 `;
 
 const App: Component = () => {
+  const [rotate, setRotate] = createSignal(true);
+
   return (
     <div class={appClass}>
       <header class='header'>
-        <img src={logo} class='logo' alt='logo' />
+        <Logo rotate={rotate()} />
+        <label class='rotate'>
+          <input
+            type='checkbox'
+            checked={rotate()}
+            onClick={() => setRotate((v) => !v)}
+          />
+          Rotate
+        </label>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
