@@ -1,7 +1,15 @@
 /* @refresh reload */
 import { render } from 'solid-js/web';
 
-import './index.css';
 import App from './App';
+import GlobalStyles from './styled/GlobalStyles';
 
-render(() => <App />, document.getElementById('root') as HTMLElement);
+render(
+  () => (
+    <>
+      <GlobalStyles />
+      <App />
+    </>
+  ),
+  document.getElementById('root') as HTMLElement,
+);
