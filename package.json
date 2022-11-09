@@ -2,6 +2,7 @@
   "name": "vite-template-solid",
   "version": "0.0.0",
   "description": "",
+  "type": "module",
   "scripts": {
     "start": "vite",
     "dev": "vite",
@@ -11,7 +12,8 @@
     "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx,json}'",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "test": "vitest"
   },
   "license": "MIT",
   "devDependencies": {
@@ -23,7 +25,9 @@
     "@storybook/builder-vite": "^0.2.5",
     "@storybook/html": "^6.5.13",
     "@storybook/testing-library": "^0.0.13",
+    "@testing-library/jest-dom": "^5.16.5",
     "@types/react": "^18.0.25",
+    "@types/testing-library__jest-dom": "^5.14.5",
     "@typescript-eslint/eslint-plugin": "^5.42.1",
     "@typescript-eslint/parser": "^5.42.1",
     "babel-loader": "^9.1.0",
@@ -34,11 +38,15 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-solid": "^0.8.0",
     "eslint-plugin-storybook": "^0.6.7",
+    "happy-dom": "^7.6.7",
+    "jsdom": "^20.0.2",
     "prettier": "^2.7.1",
+    "solid-testing-library": "^0.4.0",
     "typescript": "^4.8.4",
     "vite": "^3.2.3",
     "vite-plugin-checker": "^0.5.1",
-    "vite-plugin-solid": "^2.4.0"
+    "vite-plugin-solid": "^2.4.0",
+    "vitest": "^0.25.1"
   },
   "dependencies": {
     "solid-js": "^1.6.1",

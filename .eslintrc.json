@@ -20,7 +20,7 @@
   "plugins": ["solid", "@typescript-eslint", "prettier"],
   "rules": {
     "camelcase": "error",
-    "spaced-comment": "error",
+    "spaced-comment": ["error", "always", { "markers": ["/"] }],
     "no-duplicate-imports": "error"
   },
   "settings": {

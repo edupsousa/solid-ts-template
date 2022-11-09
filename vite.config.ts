@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vitest/config';
 import solidPlugin from 'vite-plugin-solid';
 import checker from 'vite-plugin-checker';
 
@@ -17,5 +17,18 @@ export default defineConfig({
   },
   build: {
     target: 'esnext',
+  },
+  test: {
+    environment: 'happy-dom', // or 'jsdom'
+    globals: true,
+    transformMode: {
+      web: [/\.[jt]sx$/],
+    },
+    setupFiles: './setupVitest.ts',
+    threads: false,
+    isolate: false,
+  },
+  resolve: {
+    conditions: ['development', 'browser'],
   },
 });
