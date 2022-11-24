@@ -15,7 +15,7 @@
     "skipLibCheck": false,
     "strict": true,
     "target": "ESNext",
-    "types": ["vite/client"],
+    "types": ["vite/client", "@testing-library/jest-dom"],
     "useDefineForClassFields": true
   },
   "include": ["src"],
