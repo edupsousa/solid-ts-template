@@ -1,6 +1,6 @@
 import { Component, createSignal } from 'solid-js';
-
 import { css } from 'solid-styled-components';
+
 import Logo from './Logo';
 
 const appClass = css`

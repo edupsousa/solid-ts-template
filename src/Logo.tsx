@@ -1,5 +1,6 @@
 import { JSX } from 'solid-js';
 import { css, keyframes } from 'solid-styled-components';
+
 import logo from './logo.svg';
 
 const logoSpinKeyFrames = keyframes`

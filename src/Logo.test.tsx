@@ -1,5 +1,6 @@
 import { render } from 'solid-testing-library';
 import { describe, expect, test } from 'vitest';
+
 import Logo from './Logo';
 
 describe('<Logo />', () => {

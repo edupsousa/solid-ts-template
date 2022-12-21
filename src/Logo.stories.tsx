@@ -1,6 +1,7 @@
-import Logo from './Logo';
 import type { Meta, StoryFn } from '@storybook/html';
 import type { ComponentProps } from 'solid-js';
+
+import Logo from './Logo';
 
 // example with Template
 const Template = ((args) => <Logo {...args} />) as StoryFn<
