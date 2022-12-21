@@ -1,9 +1,13 @@
-import { defineConfig } from 'vitest/config';
-import solidPlugin from 'vite-plugin-solid';
+/* Disabled because this file is used only in dev environment */
+/* eslint-disable import/no-extraneous-dependencies */
+import suidPlugin from '@suid/vite-plugin';
 import checker from 'vite-plugin-checker';
+import solidPlugin from 'vite-plugin-solid';
+import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
   plugins: [
+    suidPlugin(),
     solidPlugin(),
     checker({
       typescript: true,
