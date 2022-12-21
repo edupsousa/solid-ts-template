@@ -18,7 +18,7 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["solid", "@typescript-eslint", "simple-import-sort", "prettier"],
+  "plugins": ["solid", "@typescript-eslint", "simple-import-sort"],
   "rules": {
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
