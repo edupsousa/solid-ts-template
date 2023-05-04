@@ -1,7 +1,7 @@
 import { createGlobalStyles } from 'solid-styled-components';
 
 export default function GlobalStyles() {
-  return createGlobalStyles`
+  const Styles = createGlobalStyles`
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -16,4 +16,5 @@ export default function GlobalStyles() {
         monospace;
     }
   `;
+  return <Styles />;
 }
