@@ -4,7 +4,7 @@ A personal template for [SolidJS](https://solidjs.com) applications using TypeSc
 
 - Styled Components
 - ESLint + Prettier + Vite Checker Plugin
-- Vitest + JSDom/HappyDom
+- Vitest + JSDom
 - StoryBook
 
 ## Usage

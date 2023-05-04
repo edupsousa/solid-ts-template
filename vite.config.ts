@@ -19,7 +19,7 @@ export default defineConfig({
     target: 'esnext',
   },
   test: {
-    environment: 'happy-dom', // or 'jsdom'
+    environment: 'jsdom',
     globals: true,
     transformMode: {
       web: [/\.[jt]sx$/],
