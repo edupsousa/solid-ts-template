@@ -23,4 +23,5 @@ export default {
   argTypes: {
     rotate: { control: 'boolean' },
   },
+  render: (props) => <Logo {...props} />,
 } as Meta<ComponentProps<typeof Logo>>;
