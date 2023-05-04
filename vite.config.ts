@@ -1,8 +1,11 @@
-import { defineConfig } from 'vitest/config';
-import solidPlugin from 'vite-plugin-solid';
+import { UserConfig as ViteConfig } from 'vite';
 import checker from 'vite-plugin-checker';
+import solidPlugin from 'vite-plugin-solid';
+import { UserConfig as VitestConfig } from 'vitest/config';
 
-export default defineConfig({
+type Config = ViteConfig & { test: VitestConfig['test'] };
+
+const config: Config = {
   plugins: [
     solidPlugin(),
     checker({
@@ -31,4 +34,6 @@ export default defineConfig({
   resolve: {
     conditions: ['development', 'browser'],
   },
-});
+};
+
+export default config;

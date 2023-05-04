@@ -11,7 +11,7 @@
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "./tsconfig.json",
+    "project": ["./tsconfig.json", "./tsconfig.node.json"],
     "ecmaFeatures": {
       "jsx": true
     },
@@ -30,6 +30,17 @@
     "spaced-comment": ["error", "always", { "markers": ["/"] }],
     "no-duplicate-imports": "error"
   },
+  "overrides": [
+    {
+      "files": "vite.config.ts",
+      "rules": {
+        "import/no-extraneous-dependencies": [
+          "error",
+          { "devDependencies": true }
+        ]
+      }
+    }
+  ],
   "settings": {
     "import/resolver": {
       "typescript": {}
